@@ -7,7 +7,7 @@ export default function TodoList() {
     <section>
       <div>
         <p>
-          <span>To-do List</span>
+          <h1>To-do List</h1>
           <br />
           Drag and drop to set your main priorities, check when
           done and create what´s new.
