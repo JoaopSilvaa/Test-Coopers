@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 import GetInTouch from './GetInTouch';
 import GoodThings from './GoodThings';
 import Header from './Header';
@@ -11,6 +12,7 @@ export default function Home() {
       <TodoList />
       <GoodThings />
       <GetInTouch />
+      <Footer />
     </main>
   );
 }
