@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import fill from '../assets/Fill1.png';
 import room from '../assets/Room.jpg';
+import Login from './Login';
 
 export default function Header() {
+  const [loginHidden, setLoginHidden] = useState(true);
+
   return (
     <section>
+      { !loginHidden ? <Login setLoginHidden={ setLoginHidden } /> : null }
       <header>
         <div>
           <img src={ fill } alt="logo coopers" />
@@ -12,6 +16,7 @@ export default function Header() {
         </div>
         <button
           type="button"
+          onClick={ () => setLoginHidden(false) }
         >
           entrar
         </button>

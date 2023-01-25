@@ -1,0 +1,81 @@
+.Login {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginContainer {
+  display: flex;
+  background-color: #FFFFFF;
+  width: 90%;
+  height: 60%;
+}
+
+#buttonCloseLogin {
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+  font-weight: bold;
+  font-size: medium;
+  position: absolute;
+  z-index: 11;
+  right: 8%;
+  top: 22%;
+}
+
+#image1 {
+  padding-top: 10%;
+  width: 35%;
+  height: 35%;
+  padding-left: 5%;
+}
+
+.formLogin {
+  padding-top: 12%;
+  padding-right: 2%;
+}
+
+.formLogin p {
+  text-align: left;
+  padding-left: 5%;
+  font-size: 40px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.formLogin p span {
+  font-size: 20px;
+  color: #4AC959;
+  font-weight: normal;
+}
+
+.labelLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5%;
+  font-weight: bold;
+}
+
+.inputLogin {
+  margin-top: 4px;
+  border: 1px solid #959595;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#buttonLogin {
+  margin-top: 15%;
+  padding: 6%;
+  width: 80%;
+  border: #4AC959;
+  background-color: #4AC959;
+  color: #FFFFFF;
+  font-weight: bold;
+}
