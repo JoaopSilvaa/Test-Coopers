@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "eslint": "^8.32.0",
+    "eslint-config-trybe-frontend": "^1.6.0",
     "eslint-plugin-react": "^7.32.1"
   }
 }
