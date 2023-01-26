@@ -1,22 +1,28 @@
-import React from 'react';
-import DonesCard from './DonesCard';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import TodoCard from './TodoCard';
 
-export default function TodoList() {
+export default function TodoList({ todos, removeTodo }) {
+  const [listTodo, setList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setList(todos);
+    setLoading(false);
+  }, []);
+
   return (
-    <section>
-      <div>
-        <p>
-          <span>To-do List</span>
-          <br />
-          Drag and drop to set your main priorities, check when
-          done and create what´s new.
-        </p>
-      </div>
-      <div>
-        <TodoCard />
-        <DonesCard />
-      </div>
-    </section>
+    !loading && listTodo.length !== 0 ? (
+      listTodo.map((todo, index) => (<TodoCard
+        todo={ todo }
+        key={ index }
+        removeTodo={ removeTodo }
+      />)))
+      : <span>Carregando</span>
   );
 }
+
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf.isRequired,
+  removeTodo: PropTypes.func.isRequired,
+};

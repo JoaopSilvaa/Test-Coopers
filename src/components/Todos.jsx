@@ -1,19 +1,20 @@
 import React from 'react';
+import TodosSection from './TodosSection';
 
 export default function Todos() {
   return (
-    <div>
-      <button
-        type="button"
-      >
-        O
-      </button>
-      <span>{}</span>
-      <button
-        type="button"
-      >
-        delete
-      </button>
-    </div>
+    <section>
+      <div>
+        <p>
+          <span>To-do List</span>
+          <br />
+          Drag and drop to set your main priorities, check when
+          done and create what´s new.
+        </p>
+      </div>
+      <div>
+        <TodosSection />
+      </div>
+    </section>
   );
 }

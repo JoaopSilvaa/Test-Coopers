@@ -3,13 +3,13 @@ import Footer from './Footer';
 import GetInTouch from './GetInTouch';
 import GoodThings from './GoodThings';
 import Header from './Header';
-import TodoList from './TodoList';
+import Todos from './Todos';
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <TodoList />
+      <Todos />
       <GoodThings />
       <GetInTouch />
       <Footer />

@@ -1,28 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function TodoCard() {
+export default function TodoCard({ todo, removeTodo }) {
+  const changeSituation = () => {
+    if (todo.situation === 1) {
+      todo.situation = 0;
+    } else {
+      todo.situation = 1;
+      removeTodo();
+    }
+  };
+
   return (
     <div>
-      <p>
-        <span>To-do</span>
-        <br />
-        Take a breath.
-        <br />
-        Start doing.
-      </p>
-      <div>
-        <input
-          type="text"
-        />
-        <div>
-          {/* lista de todo */}
-        </div>
-        <button
-          type="button"
-        >
-          erase all
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={ changeSituation }
+      >
+        O
+      </button>
+      <span>{todo.content}</span>
+      <button
+        type="button"
+      >
+        delete
+      </button>
     </div>
   );
 }
+
+TodoCard.propTypes = {
+  todo: PropTypes.objectOf.isRequired,
+  removeTodo: PropTypes.func.isRequired,
+};
