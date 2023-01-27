@@ -1,0 +1,95 @@
+.headerTop {
+  display: flex;
+  width: 100%;
+  margin-top: 1em;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  margin-left: 1.4em;
+}
+
+.logoHeader img {
+  width: 2em;
+}
+
+.logoHeader span {
+  margin-left: 0.4em;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.buttonLogin {
+  margin-right: 1.4em;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  width: 5em;
+  border: 1px solid #000000;
+}
+
+.logo {
+  width: 16em;
+  z-index: 0;
+  position: absolute;
+}
+
+.room {
+  width: 10em;
+  margin-right: 1.4em;
+}
+
+.textHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 5em;
+  position: absolute;
+  z-index: 2;
+}
+
+.textHeader div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.4em;
+}
+
+.textHeader div p {
+  text-align: left;
+}
+
+.paragraphOneHeader {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.paragraphOneHeader span {
+  color: #4AC959;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.paragraphTwoHeader {
+  font-size: 0.7em;
+}
+
+.linkForTodo {
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #4AC959;
+  border: 1px solid #4AC959;
+  border-radius: 5px;
+  font-size: 0.8em;
+  width: 9em;
+  padding: 0.4em;
+  font-weight: 500;
+}
