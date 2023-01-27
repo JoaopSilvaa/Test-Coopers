@@ -9,30 +9,30 @@ export default function TodosSection() {
     setTodo(value);
   };
 
-  const addTodos = async () => {
-    const todo = {
-      situation: 0,
-      content: Todo,
-    };
-
-    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+  const addTodos = () => {
+    const listTodos = JSON.parse(localStorage.getItem('listTodos'));
     if (!listTodos) {
+      const todo = {
+        situation: 0,
+        content: Todo,
+      };
       localStorage.setItem('listTodos', JSON.stringify([todo]));
     } else {
+      const todo = {
+        situation: 0,
+        content: Todo,
+      };
       localStorage.setItem('listTodos', JSON.stringify([todo, ...listTodos]));
     }
     setTodo('');
   };
 
-  const eraseAll = async (list) => {
-    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
-    if (listTodos && listTodos.length !== 0 && list === 'dones') {
-      const listWithoutDones = listTodos.filter((item) => item.situation === 0);
-      localStorage.setItem('listTodos', JSON.stringify(listWithoutDones));
+  const eraseAll = (list) => {
+    if (list === 'dones') {
+      localStorage.removeItem('listDones');
     }
-    if (listTodos && listTodos.length !== 0 && list === 'todos') {
-      const listWithoutTodos = listTodos.filter((item) => item.situation === 1);
-      localStorage.setItem('listTodos', JSON.stringify(listWithoutTodos));
+    if (list === 'todos') {
+      localStorage.removeItem('listTodos');
     }
   };
 

@@ -7,11 +7,12 @@ export default function DonesList() {
 
   useEffect(() => {
     async function setItems() {
-      const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+      const listTodos = await JSON.parse(localStorage.getItem('listDones'));
       if (listTodos && listTodos.length !== 0) {
-        const listDone = listTodos.filter((todo) => todo.situation === 1);
-        setList(listDone);
+        setList(listTodos);
         setLoading(false);
+      } else {
+        setList([]);
       }
     }
     setItems();
@@ -32,9 +33,10 @@ export default function DonesList() {
       </p>
 
       { !loading ? (
-        listTodo.map((todo, index) => (<TodoCard
-          todo={ todo }
+        listTodo.map(({ content, situation }, index) => (<TodoCard
+          content={ content }
           key={ index }
+          situation={ situation }
         />)))
         : <span>Carregando</span> }
     </div>
