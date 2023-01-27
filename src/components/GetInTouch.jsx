@@ -1,9 +1,10 @@
 import React from 'react';
 import tatiana from '../assets/tatiana.png';
+import './GetInTouch.css';
 
 export default function GetInTouch() {
   return (
-    <section>
+    <section className="GetInTouch">
       <img src={ tatiana } alt="Tatiana" />
       <h3>
         GET IN

@@ -35,7 +35,7 @@ export default function Header() {
             <span>your daily jobs</span>
           </p>
           <p className="paragraphTwoHeader">The only way to get things done</p>
-          <a href="todo" className="linkForTodo">Go to to-do list</a>
+          <a href="#todo" className="linkForTodo">Go to to-do list</a>
         </div>
         <img src={ room } alt="sala comum ambiente agradável" className="room" />
       </div>

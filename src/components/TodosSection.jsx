@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DonesList from './DonesList';
 import TodoList from './TodoList';
+import './TodosSection.css';
 
 export default function TodosSection() {
   const [Todo, setTodo] = useState('');
@@ -37,7 +38,7 @@ export default function TodosSection() {
   };
 
   return (
-    <div id="todo">
+    <div>
       <p>
         <span>To-do</span>
         <br />

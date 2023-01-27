@@ -1,9 +1,10 @@
 import React from 'react';
 import TodosSection from './TodosSection';
+import './Todos.css';
 
 export default function Todos() {
   return (
-    <section>
+    <section id="todo">
       <div>
         <p>
           <span>To-do List</span>
