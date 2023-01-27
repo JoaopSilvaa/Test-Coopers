@@ -1,13 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function TodoCard({ todo, removeTodo }) {
-  const changeSituation = () => {
-    if (todo.situation === 1) {
-      todo.situation = 0;
-    } else {
-      todo.situation = 1;
-      removeTodo();
+export default function TodoCard({ todo }) {
+  const changeSituation = async () => {
+    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+    if (listTodos && listTodos.length !== 0) {
+      const listChangedTodo = listTodos
+        .map((item) => {
+          if (item.content === todo.content) {
+            if (item.situation === 0) {
+              item.situation = 1;
+            } else {
+              item.situation = 0;
+            }
+          }
+          return item;
+        });
+      localStorage.setItem('listTodos', JSON.stringify(listChangedTodo));
+    }
+  };
+
+  const deleteTodo = async () => {
+    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+    if (listTodos && listTodos.length !== 0) {
+      const listChangedTodo = listTodos
+        .filter((item) => item.content !== todo.content);
+      localStorage.setItem('listTodos', JSON.stringify(listChangedTodo));
     }
   };
 
@@ -22,6 +40,7 @@ export default function TodoCard({ todo, removeTodo }) {
       <span>{todo.content}</span>
       <button
         type="button"
+        onClick={ deleteTodo }
       >
         delete
       </button>
@@ -31,5 +50,4 @@ export default function TodoCard({ todo, removeTodo }) {
 
 TodoCard.propTypes = {
   todo: PropTypes.objectOf.isRequired,
-  removeTodo: PropTypes.func.isRequired,
 };

@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import TodoCard from './TodoCard';
 
-export default function DonesList({ todos, removeTodo }) {
+export default function DonesList() {
   const [listTodo, setList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setList(todos);
-    setLoading(false);
-  }, [todos]);
+    async function setItems() {
+      const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+      if (listTodos && listTodos.length !== 0) {
+        const listDone = listTodos.filter((todo) => todo.situation === 1);
+        setList(listDone);
+        setLoading(false);
+      }
+    }
+    setItems();
+  }, [listTodo]);
 
   return (
     <div>
@@ -29,14 +35,8 @@ export default function DonesList({ todos, removeTodo }) {
         listTodo.map((todo, index) => (<TodoCard
           todo={ todo }
           key={ index }
-          removeTodo={ removeTodo }
         />)))
         : <span>Carregando</span> }
     </div>
   );
 }
-
-DonesList.propTypes = {
-  todos: PropTypes.arrayOf.isRequired,
-  removeTodo: PropTypes.func.isRequired,
-};

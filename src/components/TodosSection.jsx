@@ -1,44 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import DonesList from './DonesList';
 import TodoList from './TodoList';
 
 export default function TodosSection() {
-  const [todosNotDone, setTodosNotDone] = useState([]);
-  const [todosDone, setTodosDone] = useState([]);
   const [Todo, setTodo] = useState('');
 
   const handleTodo = ({ target: { value } }) => {
     setTodo(value);
   };
 
-  const addTodos = () => {
+  const addTodos = async () => {
     const todo = {
       situation: 0,
       content: Todo,
     };
 
-    const listTodos = todosNotDone;
-    listTodos.push(todo);
-    setTodosNotDone(listTodos);
+    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+    if (!listTodos) {
+      localStorage.setItem('listTodos', JSON.stringify([todo]));
+    } else {
+      localStorage.setItem('listTodos', JSON.stringify([todo, ...listTodos]));
+    }
     setTodo('');
   };
 
-  const removeTodo = () => {
-    const list = todosNotDone.filter((todo) => todo.situation === 1);
-    console.log(list);
-    const listNotDones = todosNotDone.filter((todo) => todo.situation === 0);
-    console.log(listNotDones);
-    setTodosDone(listNotDones);
-    setTodosDone(list);
+  const eraseAll = async (list) => {
+    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+    if (listTodos && listTodos.length !== 0 && list === 'dones') {
+      const listWithoutDones = listTodos.filter((item) => item.situation === 0);
+      localStorage.setItem('listTodos', JSON.stringify(listWithoutDones));
+    }
+    if (listTodos && listTodos.length !== 0 && list === 'todos') {
+      const listWithoutTodos = listTodos.filter((item) => item.situation === 1);
+      localStorage.setItem('listTodos', JSON.stringify(listWithoutTodos));
+    }
   };
-
-  useEffect(() => {
-    console.log('executou');
-  }, [todosDone]);
-
-  useEffect(() => {
-    console.log('executou');
-  }, [todosNotDone]);
 
   return (
     <div>
@@ -61,13 +57,20 @@ export default function TodosSection() {
           onChange={ handleTodo }
           value={ Todo }
         />
-        <TodoList todos={ todosNotDone } removeTodo={ removeTodo } />
+        <TodoList />
         <button
           type="button"
+          onClick={ () => eraseAll('todos') }
         >
           erase all
         </button>
-        <DonesList todos={ todosDone } removeTodo={ removeTodo } />
+        <DonesList />
+        <button
+          type="button"
+          onClick={ () => eraseAll('dones') }
+        >
+          erase all
+        </button>
       </div>
     </div>
   );

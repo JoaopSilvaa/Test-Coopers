@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import TodoCard from './TodoCard';
 
-export default function TodoList({ todos, removeTodo }) {
+export default function TodoList() {
   const [listTodo, setList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setList(todos);
-    setLoading(false);
-  }, []);
+    async function setItems() {
+      const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+      if (listTodos && listTodos.length !== 0) {
+        const listTodosNotDone = listTodos.filter((todo) => todo.situation === 0);
+        setList(listTodosNotDone);
+        setLoading(false);
+      }
+    }
+    setItems();
+  }, [listTodo]);
 
   return (
-    !loading && listTodo.length !== 0 ? (
+    !loading ? (
       listTodo.map((todo, index) => (<TodoCard
         todo={ todo }
         key={ index }
-        removeTodo={ removeTodo }
       />)))
       : <span>Carregando</span>
   );
 }
-
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf.isRequired,
-  removeTodo: PropTypes.func.isRequired,
-};
