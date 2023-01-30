@@ -1,3 +1,8 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+}
+
 .headerTop {
   display: flex;
   width: 100%;
@@ -5,7 +10,6 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  position: absolute;
 }
 
 .logoHeader {
@@ -36,9 +40,12 @@
 }
 
 .logo {
-  width: 16em;
+  width: 13em;
+  height: 17em;
   z-index: 1;
-  position: absolute;
+  position: relative;
+  left: 12em;
+  top: -1.5em;
 }
 
 .room {
@@ -49,9 +56,9 @@
 .textHeader {
   width: 100%;
   display: flex;
+  top: -15em;
   justify-content: space-between;
-  top: 5em;
-  position: absolute;
+  position: relative;
   z-index: 2;
 }
 

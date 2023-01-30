@@ -1,4 +1,6 @@
 .GoodThings {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 65em;
   z-index: 0;

@@ -9,7 +9,7 @@ export default function Header() {
   const [loginHidden, setLoginHidden] = useState(true);
 
   return (
-    <section>
+    <section className="Header">
       { !loginHidden ? <Login setLoginHidden={ setLoginHidden } /> : null }
       <header
         className="headerTop"

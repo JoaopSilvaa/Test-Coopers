@@ -1,6 +1,6 @@
 #todo {
-  position: absolute;
-  top: 16.4em;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
