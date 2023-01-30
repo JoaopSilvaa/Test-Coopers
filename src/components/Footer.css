@@ -1,4 +1,44 @@
 .Footer {
   position: absolute;
-  top: 200em;
+  top: 185em;
+  bottom: 0;
+}
+
+#bgFooter {
+  position: absolute;
+  z-index: 0;
+  height: 11em;
+  left: 0;
+}
+
+#bgFooter2 {
+  position: absolute;
+  z-index: 1;
+  margin-top: 8.55em;
+  left: 2.3em;
+  width: 20em;
+  height: 2.5em;
+}
+
+.textFooter {
+  position: absolute;
+  top: 2.5em;
+  color: #FFFFFF;
+  left: 6.8em;
+}
+
+#need {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 2.5em;
+}
+
+#emailFooter {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+#reserv {
+  font-size: 0.6em;
 }
