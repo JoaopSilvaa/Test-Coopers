@@ -1,4 +1,95 @@
 .GetInTouch {
   position: absolute;
-  top: 200em;
+  top: 150em;
+}
+
+#tatiana {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  width: 10em;
+  margin-left: 2.3em;
+}
+
+#square {
+  position: absolute;
+  z-index: 0;
+  background-color: #46BD62;
+  width: 5em;
+  height: 1.2em;
+  top: 4.4em;
+  left: 4.5em;
+}
+
+#titleGet {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 3em;
+}
+
+#titleGet h3 {
+  text-align: left;
+  color: #06152B;
+  font-weight: 300;
+}
+
+#mail {
+  height: 1.5em;
+  margin-right: 1.4em;
+  background-color: #46BD62;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+#formGet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#buttonForm {
+  background-color: #46BD62;
+  color: #FFFFFF;
+  border: 1px solid #46BD62;
+  border-radius: 3px;
+  width: 84%;
+  margin-left: 1em;
+  font-size: 0.8em;
+  padding: 0.6em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.labelForms {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: flex-start;
+  color: #06152B;
+  font-size: 0.8em;
+}
+
+.labelForms input {
+  width: 100%;
+  margin-top: 0.5em;
+  border-radius: 3px;
+  padding: 0.5em;
+  border: 1px solid #06152B;
+  margin-bottom: 1.5em;
+}
+
+.labelForms input::placeholder {
+  color: #9A9A9A;
+}
+
+#emailAndPhone {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#emailAndPhone label {
+  width: 45%;
 }
