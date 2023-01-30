@@ -43,8 +43,9 @@ export default function TodoCard({ content, situation }) {
       <button
         type="button"
         onClick={ changeSituation }
+        className={ situation === 0 ? 'todoAdd' : 'doneTodo' }
       >
-        O
+        { situation === 0 ? '' : '✔' }
       </button>
       <span>
         { content }
@@ -52,6 +53,7 @@ export default function TodoCard({ content, situation }) {
       <button
         type="button"
         onClick={ deleteTodo }
+        className="deleteButton"
       >
         delete
       </button>

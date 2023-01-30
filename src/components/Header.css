@@ -4,7 +4,7 @@
   margin-top: 1em;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .buttonLogin {
-  margin-right: 1.4em;
+  margin-right: 2em;
   background-color: #000000;
   color: #FFFFFF;
   padding: 0.5em;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bold;
   width: 5em;
   border: 1px solid #000000;
@@ -37,7 +37,7 @@
 
 .logo {
   width: 16em;
-  z-index: 0;
+  z-index: 1;
   position: absolute;
 }
 

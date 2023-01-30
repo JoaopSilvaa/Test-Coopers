@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TodoCard from './TodoCard';
+import './DonesList.css';
 
 export default function DonesList() {
   const [listTodo, setList] = useState([]);
@@ -20,16 +21,18 @@ export default function DonesList() {
 
   return (
     <div>
-      <p>
+      <p id="titleDone">
         <span>Done</span>
         <br />
         Congratulions!
         <br />
-        You have done
-        {' '}
-        { listTodo.length }
-        {' '}
-        tasks
+        <b>
+          You have done
+          {' '}
+          { listTodo.length }
+          {' '}
+          tasks
+        </b>
       </p>
 
       { !loading ? (
@@ -38,7 +41,7 @@ export default function DonesList() {
           key={ index }
           situation={ situation }
         />)))
-        : <span>Carregando</span> }
+        : <span> </span> }
     </div>
   );
 }

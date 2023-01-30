@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import TodoCard from './TodoCard';
+import './TodoList.css';
 
 export default function TodoList() {
   const [listTodo, setList] = useState([]);
@@ -59,6 +60,6 @@ export default function TodoList() {
           )}
         </Droppable>
       </DragDropContext>)
-      : <span>Carregando</span>
+      : <span> </span>
   );
 }

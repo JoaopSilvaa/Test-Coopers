@@ -1,0 +1,98 @@
+.todoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9em;
+}
+
+#todoBlock {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 20px solid #E88D39;
+  box-shadow: 0px 4px 12px rgba(66, 66, 66, 0.198454);
+}
+
+.buttonErase {
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  width: 70%;
+  padding: 0.7em;
+  font-size: 1.05em;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#titleTodo {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+#titleTodo span {
+  font-weight: bold;
+  font-size: 1.6em;
+  display: inline-block;
+  margin-bottom: 0.6em;
+}
+
+#todosList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#inputTodos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#inputTask {
+  border: #FFFFFF;
+  font-size: 1.1em;
+}
+
+#confirmTask {
+  background-color: #FFFFFF;
+  border: 2px solid #A1A1A1;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  font-size: 1.3em;
+  color: #4AC959;
+  margin-right: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#inputTask::placeholder {
+  font-weight: 600;
+  color: #000000;
+}
+
+.donesBlock {
+  width: 80%;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 20px solid #4AC959;
+  box-shadow: 0px 4px 12px rgba(66, 66, 66, 0.198454);
+}
+
+#detail1 {
+  display: none;
+}
+
+#detail2 {
+  display: none;
+}

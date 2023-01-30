@@ -1,4 +1,46 @@
 .todoCard {
-  background-color: green;
-  border: 2px solid;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+  margin-bottom: 1.2em;
+}
+
+.todoAdd {
+  border: 2px solid #E88D39;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  width: 1.9em;
+  height: 1.7em;
+  margin-left: 1.5em;
+}
+
+.todoCard span {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1.4em;
+}
+
+.deleteButton {
+  color: #999999;
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+  margin-right: 1.1em;
+  font-size: 0.6em;
+}
+
+.doneTodo {
+  border: #4AC959;
+  width: 1em;
+  height: 1em;
+  font-size: 1.3em;
+  color: #FFFFFF;
+  border-radius: 50%;
+  background-color: #4AC959;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

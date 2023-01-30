@@ -1,0 +1,11 @@
+#titleDone {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+#titleDone span {
+  font-weight: bold;
+  font-size: 1.6em;
+  display: inline-block;
+  margin-bottom: 0.6em;
+}

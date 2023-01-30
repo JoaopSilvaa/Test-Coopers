@@ -1,4 +1,30 @@
 #todo {
   position: absolute;
-  top: 19em;
+  top: 16.4em;
+  width: 100%;
+}
+
+#bg2 {
+  position: absolute;
+  z-index: 0;
+  width: 25em;
+  left: 0;
+}
+
+.titleTodo {
+  position: absolute;
+  z-index: 2;
+  color: #FFFFFF;
+  left: 10em;
+  top: 1.5em;
+  font-size: 0.6em;
+  font-weight: 500;
+}
+
+.titleTodo span {
+  display: inline-block;
+  font-weight: bold;
+  border-bottom: 1px solid #4AC959;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
 }
