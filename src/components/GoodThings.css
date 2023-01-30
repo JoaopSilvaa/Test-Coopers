@@ -1,4 +1,19 @@
 .GoodThings {
   position: absolute;
-  top: 100em;
+  top: 65em;
+  z-index: 0;
+  background-color: #4AC959;
+  padding-bottom: 2em;
+}
+
+.GoodThings h2 {
+  color: #FFFFFF;
+  font-size: 2.3em;
+  margin-bottom: 0;
+}
+
+#sectionThings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

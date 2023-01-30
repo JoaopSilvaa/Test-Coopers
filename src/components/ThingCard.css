@@ -1,0 +1,50 @@
+.ThingCard {
+  width: 80%;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px #C4C4C4;
+}
+
+.imageThing {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.logoThing {
+  position: absolute;
+  width: 2.5em;
+  margin-top: 150px;
+  margin-left: 235px;
+}
+
+.function {
+  color: #9499B3;
+  border: 1px solid #9499B3;
+  border-radius: 20px;
+  padding: 5px;
+  width: 5em;
+  font-size: 0.8em;
+  margin-top: 1.2em;
+  margin-right: 14em;
+}
+
+.textThing {
+  text-align: left;
+  width: 80%;
+  color: #312F4F;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+.readMoreThing {
+  color: #42D76B;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-right: 12.5em;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
