@@ -1,42 +1,44 @@
 .Footer {
-  position: absolute;
-  top: 185em;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
 }
 
 #bgFooter {
-  position: absolute;
   z-index: 0;
   height: 11em;
+  width: 100%;
   left: 0;
 }
 
 #bgFooter2 {
-  position: absolute;
   z-index: 1;
-  margin-top: 8.55em;
-  left: 2.3em;
-  width: 20em;
-  height: 2.5em;
+  width: 70%;
+  height: 1.6em;
+  margin-top: 2.2em;
 }
 
 .textFooter {
-  position: absolute;
-  top: 2.5em;
+  z-index: 1;
+  margin-top: -8.5em;
   color: #FFFFFF;
-  left: 6.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #need {
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 600;
-  line-height: 2.5em;
+  line-height: 1.5em;
 }
 
 #emailFooter {
   font-size: 1em;
   font-weight: 600;
-  line-height: 1.3em;
+  line-height: 2em;
 }
 
 #reserv {

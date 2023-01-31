@@ -16,9 +16,7 @@ export default function Todos() {
           when done and create what´s new.
         </p>
       </div>
-      <div>
-        <TodosSection />
-      </div>
+      <TodosSection />
     </section>
   );
 }

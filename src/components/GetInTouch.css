@@ -1,6 +1,8 @@
 .GetInTouch {
-  position: absolute;
-  top: 150em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
 }
 
 #tatiana {
@@ -12,20 +14,20 @@
 }
 
 #square {
-  position: absolute;
+  margin-top: -5.65em;
+  margin-right: 8em;
   z-index: 0;
   background-color: #46BD62;
   width: 5em;
   height: 1.2em;
-  top: 4.4em;
-  left: 4.5em;
 }
 
 #titleGet {
+  margin-top: 5em;
   display: flex;
   align-items: center;
   width: 100%;
-  margin-left: 3em;
+  margin-left: 5em;
 }
 
 #titleGet h3 {

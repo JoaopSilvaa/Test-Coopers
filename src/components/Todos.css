@@ -1,24 +1,26 @@
 #todo {
+  margin-top: -13.3em;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 #bg2 {
-  position: absolute;
+  position: relative;
   z-index: 0;
   width: 25em;
   left: 0;
 }
 
 .titleTodo {
-  position: absolute;
+  position: relative;
   z-index: 2;
   color: #FFFFFF;
-  left: 10em;
-  top: 1.5em;
   font-size: 0.6em;
   font-weight: 500;
+  top: -11em;
 }
 
 .titleTodo span {

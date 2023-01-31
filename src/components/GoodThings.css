@@ -1,8 +1,7 @@
 .GoodThings {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 65em;
+  margin-top: 2em;
   z-index: 0;
   background-color: #4AC959;
   padding-bottom: 2em;
