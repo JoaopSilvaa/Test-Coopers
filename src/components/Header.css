@@ -100,3 +100,103 @@
   padding: 0.4em;
   font-weight: 500;
 }
+
+@media screen and (min-width:768px) and (max-width:1280px) { 
+  .headerTop {
+    margin-top: 1.5em;
+  }
+  
+  .logoHeader {
+    margin-left: 2em;
+  }
+  
+  
+  .buttonLogin {
+    margin-right: 2.5em;
+    padding: 0.7em;
+    font-size: 0.8em;
+    width: 6em;
+  }
+  
+  .logo {
+    width: 30em;
+    height: 34em;
+    left: 22.5em;
+    top: -2.8em;
+  }
+  
+  .room {
+    width: 23em;
+    margin-right: 2em;
+  }
+  
+  .textHeader {
+    top: -32em;
+  }
+  
+  .textHeader div {
+    margin-left: 2em;
+  }
+  
+  .textHeader div p {
+    text-align: left;
+  }
+  
+  .paragraphOneHeader {
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 45px;
+  }
+  
+  .paragraphTwoHeader {
+    font-size: 1.2em;
+  }
+  
+  .linkForTodo {
+    font-size: 1.3em;
+  }
+}
+
+
+@media screen and (min-width:1280px) { 
+  .headerTop {
+    margin-top: 2em;
+  }
+  
+  .buttonLogin {
+    margin-right: 2.5em;
+    padding: 0.9em;
+    font-size: 0.9em;
+    width: 7em;
+  }
+  
+  .logo {
+    width: 40em;
+    height: 40em;
+    left: 40em;
+  }
+  
+  .room {
+    width: 27em;
+  }
+  
+  .textHeader {
+    top: -37em;
+  }
+  
+  .textHeader div {
+    margin-left: 2em;
+  }
+  
+  .paragraphOneHeader {
+    font-size: 4em;
+  }
+  
+  .paragraphTwoHeader {
+    font-size: 1.6em;
+  }
+  
+  .linkForTodo {
+    font-size: 1.6em;
+  }
+}

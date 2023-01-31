@@ -97,3 +97,70 @@
 #detail2 {
   display: none;
 }
+
+@media screen and (min-width:768px) and (max-width:1280px) {
+  .todoSection {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 80%;
+    margin-top: -10.5em;
+  }
+  
+  #todoBlock {
+    width: 45%;
+  }
+  
+  #inputTask {
+    border: #FFFFFF;
+    font-size: 1.1em;
+  }
+  
+  .donesBlock {
+    width: 45%;
+  }
+  
+  #detail1 {
+    display: flex;
+    z-index: -3;
+    position: absolute;
+    left: 0;
+    width: 5em;
+    top: 60em;
+  }
+  
+  #detail2 {
+    position: absolute;
+    display: flex;
+    z-index: -3;
+    top: 59.5em;
+    width: 3.5em;
+    left: 0;
+  }
+}
+
+
+@media screen and (min-width:1280px) { 
+  .todoSection {
+    width: 70%;
+  }
+  
+  #todoBlock {
+    width: 40%;
+  }
+
+  .donesBlock {
+    width: 40%;
+  }
+
+  #detail1 {
+    width: 8em;
+    top: 65em;
+  }
+  
+  #detail2 {
+    top: 67.5em;
+    width: 5em;
+  }
+}
