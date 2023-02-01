@@ -15,7 +15,7 @@
   display: flex;
   background-color: #FFFFFF;
   width: 90%;
-  height: 60%;
+  height: 55%;
 }
 
 #buttonCloseLogin {
@@ -26,7 +26,7 @@
   position: absolute;
   z-index: 11;
   right: 8%;
-  top: 22%;
+  top: 9em;
 }
 
 #image1 {
@@ -81,9 +81,10 @@
   font-weight: bold;
 }
 
-@media screen and (min-width:768px) and (max-width:1280px) {
+@media screen and (min-width:768px) and (max-width:1194px) {
   #buttonCloseLogin {
     font-size: 1.6em;
+    top: 11em;
   }
   
   #image1 {
@@ -127,33 +128,26 @@
   }
 }
 
-@media screen and (min-width:1281px) {
+@media screen and (min-width:1194px) and (max-width:1280px) {
   .LoginContainer {
-    width: 40%;
-    height: 60%;
+    width: 50%;
+    height: 70%;
   }
   
   #buttonCloseLogin {
-    top: 13.5em;
-    right: 37.5em;
-  }
-  
-  #image1 {
-    padding-top: 10%;
-    width: 30%;
-    height: 30%;
-    padding-left: 7%;
+    top: 8em;
+    right: 18em;
   }
   
   .formLogin {
-    padding-top: 7%;
+    padding-top: 2em;
     width: 100%;
   }
   
   .formLogin p {
-    font-size: 5.5em;
-    line-height: 60px;
-    margin-bottom: 0.6em;
+    font-size: 4em;
+    line-height: 50px;
+    margin-bottom: 0.2em;
   }
   
   .formLogin p span {
@@ -162,7 +156,7 @@
   }
   
   .labelLogin {
-    padding-left: 2.1em;
+    padding-left: 1em;
     font-size: 1.3em;
     font-weight: 500;
   }
@@ -175,10 +169,59 @@
   }
   
   #buttonLogin {
-    margin-top: 10%;
+    margin-top: 1.55em;
     padding: 2%;
     width: 35%;
     font-size: 1.5em;
-    margin-right: 10em;
+    margin-right: 6em;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .LoginContainer {
+    width: 45%;
+    height: 65%;
+  }
+  
+  #buttonCloseLogin {
+    top: 10em;
+    right: 28em;
+  }
+  
+  .formLogin {
+    padding-top: 2em;
+    width: 100%;
+  }
+  
+  .formLogin p {
+    font-size: 4em;
+    line-height: 50px;
+    margin-bottom: 0.2em;
+  }
+  
+  .formLogin p span {
+    font-size: 0.6em;
+    font-weight: 300;
+  }
+  
+  .labelLogin {
+    padding-left: 1em;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  .inputLogin {
+    padding: 8px;
+    width: 48%;
+    padding: 1.3em;
+    border-radius: 10px;
+  }
+  
+  #buttonLogin {
+    margin-top: 1.55em;
+    padding: 2%;
+    width: 35%;
+    font-size: 1.5em;
+    margin-right: 9.5em;
   }
 }
