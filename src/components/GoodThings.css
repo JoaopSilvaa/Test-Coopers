@@ -44,3 +44,29 @@
     margin-left: 5em;
   }
 }
+
+@media screen and (min-width:1281px) {
+  .GoodThings {
+    width: 60%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25em;
+    margin-bottom: 12em;
+    margin-top: 3.5em;
+  }
+
+  .GoodThings h2 {
+    text-align: left;
+    margin-left: 2em;
+  }
+
+  #sectionThings {
+    flex-direction: row;
+    position: absolute;
+    margin-top: 5em;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 5em;
+  }
+}

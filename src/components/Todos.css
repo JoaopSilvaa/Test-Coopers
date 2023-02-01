@@ -66,3 +66,22 @@
   }
 }
 
+@media screen and (min-width:1281px) { 
+  #todo {
+    margin-top: -33em;
+  }
+  
+  #bg2 {
+    width: 114.4em;
+  }
+
+  .titleTodo {
+    font-size: 2.3em;
+    top: -11.5em;
+  }
+  
+  .titleTodo span {
+    border-bottom: 3px solid #4AC959;
+  }
+}
+

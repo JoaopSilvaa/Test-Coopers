@@ -45,7 +45,7 @@ export default function GetInTouch() {
         </div>
         <label className="labelForms" htmlFor="message">
           Message*
-          <input
+          <textarea
             id="message"
             type="text"
             placeholder="Type what you want to say to us"

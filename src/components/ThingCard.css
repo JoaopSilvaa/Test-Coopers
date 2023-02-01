@@ -80,7 +80,6 @@
   }
 }
 
-
 @media screen and (min-width:1194px) and (max-width:1280px) {
   .ThingCard {
     width: 35%;
@@ -106,6 +105,35 @@
   .readMoreThing {
     position: absolute;
     margin-right: 16em;
+    margin-top: 24em;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .ThingCard {
+    width: 40%;
+    height: 25em;
+    margin-right: -15em;
+  }
+  
+  .logoThing {
+    margin-right: -15em;
+  }
+  
+  .function {
+    margin-right: 15em;
+  }
+  
+  .textThing {
+    margin-top: 3em;
+    width: 80%;
+    font-size: 1em; 
+    margin-left: -0.9em;
+  }
+  
+  .readMoreThing {
+    position: absolute;
+    margin-right: 14em;
     margin-top: 24em;
   }
 }

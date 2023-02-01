@@ -101,7 +101,7 @@
   font-weight: 500;
 }
 
-@media screen and (min-width:768px) and (max-width:1280px) { 
+@media screen and (min-width:768px) and (max-width:1194px) { 
   .headerTop {
     margin-top: 1.5em;
   }
@@ -158,7 +158,7 @@
 }
 
 
-@media screen and (min-width:1280px) { 
+@media screen and (min-width:1194px) and (max-width:1280px) { 
   .headerTop {
     margin-top: 2em;
   }
@@ -190,6 +190,69 @@
   
   .paragraphOneHeader {
     font-size: 4em;
+    line-height: 0.9em;
+  }
+  
+  .paragraphTwoHeader {
+    font-size: 1.6em;
+  }
+  
+  .linkForTodo {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .headerTop {
+    margin-top: 3em;
+  }
+
+  .logoHeader {
+    display: flex;
+    align-items: center;
+    margin-left: 4em;
+  }
+  
+  .logoHeader img {
+    width: 2.5em;
+  }
+  
+  .logoHeader span {
+    margin-left: 0.4em;
+    font-size: 2em;
+    font-weight: 500;
+  }
+  
+  .buttonLogin {
+    margin-right: 4em;
+    padding: 0.9em;
+    font-size: 0.9em;
+    width: 7em;
+  }
+  
+  .logo {
+    top: -3em;
+    width: 43em;
+    height: 45em;
+    left: 71.5em;
+  }
+  
+  .room {
+    width: 27em;
+    margin-right: 4em;
+  }
+  
+  .textHeader {
+    top: -40em;
+  }
+  
+  .textHeader div {
+    margin-left: 4em;
+  }
+  
+  .paragraphOneHeader {
+    font-size: 4em;
+    line-height: 0.9em;
   }
   
   .paragraphTwoHeader {

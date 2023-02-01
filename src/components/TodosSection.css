@@ -141,26 +141,44 @@
 }
 
 
-@media screen and (min-width:1280px) { 
+@media screen and (min-width:1281px) { 
   .todoSection {
-    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 45%;
+    margin-top: -18em;
   }
   
   #todoBlock {
-    width: 40%;
+    width: 45%;
   }
-
+  
+  #inputTask {
+    border: #FFFFFF;
+    font-size: 1.1em;
+  }
+  
   .donesBlock {
-    width: 40%;
+    width: 45%;
   }
-
+  
   #detail1 {
-    width: 8em;
-    top: 65em;
+    display: flex;
+    z-index: -3;
+    position: absolute;
+    left: 0;
+    width: 10em;
+    top: 80em;
   }
   
   #detail2 {
-    top: 67.5em;
-    width: 5em;
+    position: absolute;
+    display: flex;
+    z-index: -3;
+    top: 84.5em;
+    width: 6em;
+    left: 0;
   }
 }
