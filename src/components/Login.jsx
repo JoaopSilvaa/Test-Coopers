@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import image1 from '../assets/image1.png';
 import { requestData, sendLogin, setToken } from '../services/requests';
 
-export default function Login({ setLoginHidden }) {
+export default function Login({ setLoginHidden, setLogged }) {
   const [failedLogin, setFailedLogin] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -22,6 +22,8 @@ export default function Login({ setLoginHidden }) {
       const todos = allTasks.filter((item) => item.situation === 0);
       localStorage.setItem('listTodos', JSON.stringify(todos));
       localStorage.setItem('listDones', JSON.stringify(dones));
+      localStorage.setItem('token', JSON.stringify(token));
+      setLogged(false);
     } catch (error) {
       setError('Invalid Fields');
       setFailedLogin(true);
@@ -93,4 +95,5 @@ export default function Login({ setLoginHidden }) {
 
 Login.propTypes = {
   setLoginHidden: PropTypes.func.isRequired,
+  setLogged: PropTypes.func.isRequired,
 };

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: 'https://test-coopers-back-production.up.railway.app/',
 });
 
 export const setToken = (token) => {
@@ -24,8 +24,16 @@ export const createTask = async (body) => {
   await api.post('/task', body);
 };
 
+export const updateTask = async (id) => {
+  await api.put(`/task/${id}`);
+};
+
 export const deleteTask = async (id) => {
   await api.delete(`/task/${id}`);
+};
+
+export const deleteAllTask = async (situation) => {
+  await api.delete(`/task/all/${situation}`);
 };
 
 export default api;

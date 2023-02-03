@@ -4,6 +4,7 @@ import TodoList from './TodoList';
 import './TodosSection.css';
 import detail1 from '../assets/DetailPage1.png';
 import detail2 from '../assets/DetailPage2.png';
+import { createTask, deleteAllTask, requestData } from '../services/requests';
 
 export default function TodosSection() {
   const [Todo, setTodo] = useState('');
@@ -12,30 +13,56 @@ export default function TodosSection() {
     setTodo(value);
   };
 
-  const addTodos = () => {
-    const listTodos = JSON.parse(localStorage.getItem('listTodos'));
-    if (!listTodos) {
-      const todo = {
-        situation: 0,
-        content: Todo,
-      };
-      localStorage.setItem('listTodos', JSON.stringify([todo]));
+  const addTodos = async () => {
+    const token = await JSON.parse(localStorage.getItem('token'));
+    if (token) {
+      await createTask({ content: Todo });
+      const listTodos = await requestData();
+      const dones = listTodos.filter((item) => item.situation === 1);
+      const todos = listTodos.filter((item) => item.situation === 0);
+      localStorage.setItem('listTodos', JSON.stringify(todos));
+      localStorage.setItem('listDones', JSON.stringify(dones));
+      setTodo('');
     } else {
-      const todo = {
-        situation: 0,
-        content: Todo,
-      };
-      localStorage.setItem('listTodos', JSON.stringify([todo, ...listTodos]));
+      const listTodos = JSON.parse(localStorage.getItem('listTodos'));
+      if (!listTodos) {
+        const todo = {
+          situation: 0,
+          content: Todo,
+        };
+        localStorage.setItem('listTodos', JSON.stringify([todo]));
+      } else {
+        const todo = {
+          situation: 0,
+          content: Todo,
+        };
+        localStorage.setItem('listTodos', JSON.stringify([todo, ...listTodos]));
+      }
+      setTodo('');
     }
-    setTodo('');
   };
 
-  const eraseAll = (list) => {
-    if (list === 'dones') {
-      localStorage.removeItem('listDones');
-    }
-    if (list === 'todos') {
-      localStorage.removeItem('listTodos');
+  const eraseAll = async (list) => {
+    const token = await JSON.parse(localStorage.getItem('token'));
+    if (token) {
+      if (list === 'dones') {
+        await deleteAllTask(1);
+      }
+      if (list === 'todos') {
+        await deleteAllTask(0);
+      }
+      const listTodos = await requestData();
+      const dones = listTodos.filter((item) => item.situation === 1);
+      const todos = listTodos.filter((item) => item.situation === 0);
+      localStorage.setItem('listTodos', JSON.stringify(todos));
+      localStorage.setItem('listDones', JSON.stringify(dones));
+    } else {
+      if (list === 'dones') {
+        localStorage.removeItem('listDones');
+      }
+      if (list === 'todos') {
+        localStorage.removeItem('listTodos');
+      }
     }
   };
 

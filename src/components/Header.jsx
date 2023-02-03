@@ -4,13 +4,22 @@ import room from '../assets/Room.jpg';
 import BG from '../assets/BG.png';
 import Login from './Login';
 import './Header.css';
+import { setToken } from '../services/requests';
 
 export default function Header() {
   const [loginHidden, setLoginHidden] = useState(true);
+  const [logged, setLogged] = useState(false);
+
+  const disconect = () => {
+    localStorage.clear();
+    setLogged(true);
+    setToken('');
+  };
 
   return (
     <section className="Header">
-      { !loginHidden ? <Login setLoginHidden={ setLoginHidden } /> : null }
+      { !loginHidden ? (
+        <Login setLoginHidden={ setLoginHidden } setLogged={ setLogged } />) : null }
       <header
         className="headerTop"
       >
@@ -18,13 +27,26 @@ export default function Header() {
           <img src={ fill } alt="logo coopers" />
           <span>coopers</span>
         </div>
-        <button
-          className="buttonLogin"
-          type="button"
-          onClick={ () => setLoginHidden(false) }
-        >
-          entrar
-        </button>
+        {
+          logged
+            ? (
+              <button
+                className="buttonLogin"
+                type="button"
+                onClick={ () => setLoginHidden(false) }
+              >
+                entrar
+              </button>
+            ) : (
+              <button
+                className="buttonLogin"
+                type="button"
+                onClick={ disconect }
+              >
+                sair
+              </button>
+            )
+        }
       </header>
       <img src={ BG } alt="logo coopers" className="logo" />
       <div className="textHeader">

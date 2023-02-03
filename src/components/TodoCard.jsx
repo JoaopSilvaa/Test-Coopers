@@ -1,40 +1,65 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './TodoCard.css';
+import { deleteTask, requestData, updateTask } from '../services/requests';
 
 export default function TodoCard({ content, situation }) {
   const changeSituation = async () => {
-    const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
-    if (listTodos && listTodos.length !== 0) {
-      const todo = listTodos
+    const token = await JSON.parse(localStorage.getItem('token'));
+    if (token) {
+      const allTodos = await requestData();
+      const todo = allTodos
         .find((item) => item.content === content);
-      console.log(todo);
-      todo.situation = 1;
-      console.log(todo);
-      const listWithoutDone = listTodos.filter((item) => item.content !== todo.content);
-      const list = JSON.parse(localStorage.getItem('listDones'));
-      if (!list) {
-        localStorage.setItem('listDones', JSON.stringify([todo]));
-      } else {
-        list.push(todo);
-        localStorage.setItem('listDones', JSON.stringify(list));
+      await updateTask(todo.id);
+      const listTodos = await requestData();
+      const dones = listTodos.filter((item) => item.situation === 1);
+      const todos = listTodos.filter((item) => item.situation === 0);
+      localStorage.setItem('listTodos', JSON.stringify(todos));
+      localStorage.setItem('listDones', JSON.stringify(dones));
+    } else {
+      const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+      if (listTodos && listTodos.length !== 0) {
+        const todo = listTodos
+          .find((item) => item.content === content);
+        todo.situation = 1;
+        const listWithoutDone = listTodos.filter((item) => item.content !== todo.content);
+        const list = JSON.parse(localStorage.getItem('listDones'));
+        if (!list) {
+          localStorage.setItem('listDones', JSON.stringify([todo]));
+        } else {
+          list.push(todo);
+          localStorage.setItem('listDones', JSON.stringify(list));
+        }
+        localStorage.setItem('listTodos', JSON.stringify(listWithoutDone));
       }
-      localStorage.setItem('listTodos', JSON.stringify(listWithoutDone));
     }
   };
 
   const deleteTodo = async () => {
-    if (situation === 0) {
-      const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
-      const listChangedTodo = listTodos
-        .filter((item) => item.content !== content);
-      localStorage.setItem('listTodos', JSON.stringify(listChangedTodo));
-    }
-    if (situation === 1) {
-      const listDones = await JSON.parse(localStorage.getItem('listDones'));
-      const listChangedTodo = listDones
-        .filter((item) => item.content !== content);
-      localStorage.setItem('listDones', JSON.stringify(listChangedTodo));
+    const token = await JSON.parse(localStorage.getItem('token'));
+    if (token) {
+      const allTodos = await requestData();
+      const todo = allTodos
+        .find((item) => item.content === content);
+      await deleteTask(todo.id);
+      const listTodos = await requestData();
+      const dones = listTodos.filter((item) => item.situation === 1);
+      const todos = listTodos.filter((item) => item.situation === 0);
+      localStorage.setItem('listTodos', JSON.stringify(todos));
+      localStorage.setItem('listDones', JSON.stringify(dones));
+    } else {
+      if (situation === 0) {
+        const listTodos = await JSON.parse(localStorage.getItem('listTodos'));
+        const listChangedTodo = listTodos
+          .filter((item) => item.content !== content);
+        localStorage.setItem('listTodos', JSON.stringify(listChangedTodo));
+      }
+      if (situation === 1) {
+        const listDones = await JSON.parse(localStorage.getItem('listDones'));
+        const listChangedTodo = listDones
+          .filter((item) => item.content !== content);
+        localStorage.setItem('listDones', JSON.stringify(listChangedTodo));
+      }
     }
   };
 
