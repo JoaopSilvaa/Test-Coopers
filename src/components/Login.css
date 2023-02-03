@@ -27,6 +27,7 @@
   z-index: 11;
   right: 8%;
   top: 9em;
+  cursor: pointer;
 }
 
 #image1 {
