@@ -1,6 +1,6 @@
-# Boas vindas ao Test-Coopers!
+# Boas vindas ao Test-Coopers-Front!
 
-# O que é o Test-Coopers?
+# O que é o Test-Coopers-Front?
 
 É uma aplicação FrontEnd que consiste em uma To-do List editável, com possível ordenação drag-and-drop das tasks e que pode ser utilizada em todos os dispositivos, smartphone, tablet, notebook e desktop. Esta aplicação é uma avaliação técnica, que faz parte do processo seletivo da empresa [Coopers](https://www.linkedin.com/company/coopers-digital-production/)
 
