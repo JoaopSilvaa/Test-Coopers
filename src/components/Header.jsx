@@ -8,11 +8,11 @@ import { setToken } from '../services/requests';
 
 export default function Header() {
   const [loginHidden, setLoginHidden] = useState(true);
-  const [logged, setLogged] = useState(false);
+  const [logged, setLogged] = useState(true);
 
   const disconect = () => {
     localStorage.clear();
-    setLogged(true);
+    setLogged(false);
     setToken('');
   };
 
