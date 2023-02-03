@@ -11,7 +11,7 @@ Front-end:
 
 ## Acesso ao servidor remoto
 
-Você pode utilizar essa aplicação através do link: https://main.d2j0fk6itrrsih.amplifyapp.com/, em que está rodando através da AWS (serviço da Amazon). Você também pode acessar o Backend dessa aplicação através do link: https://test-coopers-back-production.up.railway.app/, acessar o repositório do mesmo através do link: https://github.com/JoaopSilvaa/Test-Coopers-Back.
+Você pode utilizar essa aplicação através do link: https://main.dkzynr0wbuyzk.amplifyapp.com/, em que está rodando através da AWS (serviço da Amazon). Você também pode acessar o Backend dessa aplicação através do link: https://test-coopers-back-production.up.railway.app/, acessar o repositório do mesmo através do link: https://github.com/JoaopSilvaa/Test-Coopers-Back.
 
 
 ## Executando a aplicação localmente

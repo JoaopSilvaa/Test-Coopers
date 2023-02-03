@@ -37,6 +37,7 @@
   font-weight: bold;
   width: 5em;
   border: 1px solid #000000;
+  cursor: pointer;
 }
 
 .logo {
